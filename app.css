@@ -1,0 +1,117 @@
+body{
+  color: white;
+  background-color: black;
+}
+#app {
+  margin: 0 auto;
+  border: 1px solid;
+  max-width: 600px;
+  min-width: 300px;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #094f6e;
+  border-radius: 8px;
+  font-family: 'Fira Sans', sans-serif;
+  position: relative;
+  animation-name: myanimation;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  
+}
+@keyframes myanimation{
+  0%{
+    left: -1000px;
+    opacity: 0;
+    
+  };
+  25%{
+    opacity: 0.25;
+    
+  };
+  50%{
+    opacity: 0.5;
+    
+  };
+  75%{
+    opacity: 0.75;
+   
+  }
+  100%{
+     opacity : 1;
+     left: 0
+  }
+}
+h1{
+
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 2.8em;  
+}
+.currency{
+  width: 70%;
+  margin: 0 auto;
+  text-align: initial;
+  font-size: 1.5em;
+}
+.currency p{
+  font-weight: 500;
+  color: 	#696969
+}
+.currency span{
+  color: white
+}
+
+#error{
+  font-size: 2em;
+}
+#loading{
+  font-size: 2em;
+}
+
+@media screen and (max-width:414px){
+  #app{
+    padding: 10px 0;
+    animation-duration: 2s;
+  }
+  h1{
+    font-size: 1.8em
+  }
+  .currency{
+    font-size: 1.2em;
+    width: 80%;
+   
+  }
+}
+@keyframes myanimation{
+  0%{
+    left: -400px;
+    opacity: 0;
+    
+  };
+  25%{
+    opacity: 0.25;
+    
+  };
+  50%{
+    opacity: 0.5;
+    
+  };
+  75%{
+    opacity: 0.75;
+   
+  }
+  100%{
+     opacity : 1;
+     left: 0
+  }
+}
+
+@media screen and (max-width: 375px){
+  h1{
+    font-size: 1.5em;
+  }
+  .cuurency{
+    font-size: 1em
+  }
+  
+}

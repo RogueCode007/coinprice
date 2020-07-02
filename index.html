@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <h1>Bitcoin current prices</h1>
+      <section v-if="errored">
+        <div id="error">Sorry, an error occured, try reloading or check back later</div>
+      </section>
+      <section v-else>
+        <div v-if="loading" id="loading">Loading...</div>
+        <div v-else>
+          <div v-for="currency in info" class="currency">
+            <p>{{currency.description}}:
+              <span v-html="currency.symbol"></span><span class="">{{currency.rate_float | parser}}</span>
+            </p>
+          </div>
+          <div class="currency">
+            <p>Nigerian Naira: <span>#</span><span>{{Number.parseFloat((rate * dollar)).toFixed(2)}}</span></p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>
