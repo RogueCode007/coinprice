@@ -23,9 +23,9 @@ new Vue({
       .finally(()=> this.loading = false)
   },
   mounted(){
-    fetch("http://apilayer.net/api/live?access_key=6c3655668d1f5442967eda5b31e4e0bf")
+    fetch("https://openexchangerates.org/api/latest.json?app_id=8c743057d8194900901d5c64ecca5bc9&base=USD&symbols=NGN&prettyprint=true")
     .then(response => response.json())
-    .then(data=> this.rate = data.quotes["USDNGN"])
+    .then(data => this.rate = (data.rates.NGN))
     .catch(err => {
       console.log(err);
     });
